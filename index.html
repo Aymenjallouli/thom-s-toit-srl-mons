@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thom’s toit, couvreur à Mons</title>
+<meta name="description" content="Thom’s toit SRL, couvreur basé à Quévy près de Mons : travaux de couverture, isolation, étanchéité des murs. 4,8/5 sur 41 avis Google.">
+<meta property="og:title" content="Thom’s toit, couvreur à Mons">
+<meta property="og:description" content="Couverture, isolation et étanchéité depuis Quévy. 4,8/5 sur 41 avis Google.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta name="theme-color" content="#B0452A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2316181A'/%3E%3Cpath d='M8 30 32 12l24 18' fill='none' stroke='%23E2805A' stroke-width='6' stroke-linejoin='miter'/%3E%3Cpath d='M22 32h20M32 32v22' stroke='%23EEEAE3' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/photos/photo-04.jpg" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Thom's toit SRL",
+  "telephone": "+32471676864",
+  "email": "thomstoit1995@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue de Frameries 62A",
+    "postalCode": "7040",
+    "addressLocality": "Quévy",
+    "addressCountry": "BE"
+  },
+  "areaServed": "Mons",
+  "geo": { "@type": "GeoCoordinates", "latitude": 50.371442099999996, "longitude": 3.9260728 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+  ],
+  "sameAs": ["https://www.facebook.com/search/top?q=thom%E2%80%99s%20toit"]
+}
+</script>
+<style>
+/* ==========================================================================
+   DESIGN DECISIONS — Thom’s toit SRL, couvreur (Quévy / Mons)
+   Direction: BOLD STREET, “chantier” edition. A roofer is a trade of hard
+     edges, ridges and slate; the site behaves like a site hoarding: oversized
+     condensed caps, sharp corners, one loud colour, a marquee band.
+   Palette (from the photos): --ink = wet EPDM / slate of photo-01 and the
+     solar panels of photo-03; --brand = the weathered terracotta tile of
+     photo-03 and the brick chimney of photo-01; --bg = the concrete sill in
+     the foreground of photos 01/02; --accent = the sedum of the green roof
+     (photo-02), used only for the “open now” dot. One strong move: terracotta.
+   Type: Anton (condensed display, caps, tight leading) + Archivo 400/600
+     (robust grotesk for body and labels). Ratio display/body > 1:6.
+   Hero: typographic poster on slate with the drone shot (photo-04, a full
+     re-roof) cut into a GABLE silhouette, a terracotta ridge line above it.
+   Signature: the gable-masked hero + a marquee of verbatim review fragments.
+   Rhythm: dark poster hero → terracotta marquee → light split proof (sticky
+     score + quote wall/rail) → dark oversized numbered list → full-bleed green
+     roof with overlapping quote panel → offset photo duo → big-figure band →
+     hours/map split → dark big-type contact → footer.
+   Photos: 04 hero (gable crop), 02 full-bleed, 01 portrait 4:5, 03 square
+     cropped to the right to drop the camera watermark. All four used.
+   ========================================================================== */
+:root{
+  --bg:#EEEAE3; --surface:#E3DDD3; --ink:#16181A; --ink-2:#212427; --ink-soft:#4B4E52;
+  --on-ink:#EEEAE3; --on-ink-soft:#B4B1AB;
+  --brand:#B0452A; --brand-ink:#FFF8F2; --brand-light:#E2805A; --accent:#6F8F3A;
+  --line:rgba(22,24,26,.16); --line-ink:rgba(238,234,227,.16);
+
+  --font-display:"Anton", "Arial Narrow", Impact, sans-serif;
+  --font-body:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --step--1:clamp(.84rem,.8rem + .15vw,.92rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.125rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.45rem,1.25rem + 1vw,2rem);
+  --step-3:clamp(1.9rem,1.5rem + 2vw,3rem);
+  --step-4:clamp(2.5rem,1.8rem + 3.6vw,4.5rem);
+  --step-5:clamp(3.2rem,2rem + 7vw,7.5rem);
+  --step-6:clamp(4.2rem,1rem + 16vw,9.5rem);
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --section:clamp(64px,12vw,160px);
+  --gutter:clamp(20px,5vw,48px);
+  --max:1280px;
+  --radius:2px; --radius-2:4px;
+
+  --ease-out:cubic-bezier(.16,1,.3,1); --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --dur-1:180ms; --dur-2:400ms; --dur-3:800ms;
+  --header-h:64px;
+  --gable:polygon(0 18%,50% 0,100% 18%,100% 100%,0 100%);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-0)/1.6 var(--font-body);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:1.02;letter-spacing:-.005em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+::selection{background:var(--brand);color:var(--brand-ink)}
+:focus-visible{outline:3px solid var(--brand-light);outline-offset:3px;border-radius:var(--radius)}
+section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
+.skip{position:absolute;left:var(--space-4);top:-100px;z-index:100;background:var(--brand);color:var(--brand-ink);padding:var(--space-3) var(--space-4);font-weight:600}
+.skip:focus{top:var(--space-4)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{width:100%;max-width:calc(var(--max) + 2 * var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--space-5)}
+.label{display:flex;align-items:center;gap:var(--space-3);font:600 var(--step--1)/1.2 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
+.label::before{content:"";width:28px;height:2px;background:currentColor}
+.on-ink .label{color:var(--brand-light)}
+.icon{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:square;stroke-linejoin:miter}
+.stars{display:inline-flex;gap:2px;color:var(--brand)}
+.stars svg{width:16px;height:16px;fill:currentColor}
+.on-ink{background:var(--ink);color:var(--on-ink)}
+
+/* Buttons ---------------------------------------------------------------- */
+.btn{--b:var(--brand);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-3);
+  min-height:52px;padding:0 var(--space-5);border:2px solid var(--b);background:var(--b);color:var(--brand-ink);
+  font:600 var(--step-0)/1 var(--font-body);letter-spacing:.02em;text-decoration:none;border-radius:var(--radius);
+  overflow:hidden;isolation:isolate;transition:transform var(--dur-1) var(--ease-out),color var(--dur-2) var(--ease-out)}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:translateY(101%);transition:transform var(--dur-2) var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.btn--ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn--ghost::after{background:var(--on-ink)}
+.on-ink .btn::after{background:var(--on-ink)}
+@media (hover:hover){
+  .btn:hover::after{transform:none}
+  .on-ink .btn:hover{color:var(--ink)}
+  .btn--ghost:hover{color:var(--ink)}
+  .light .btn--ghost::after{background:var(--ink)}
+  .light .btn--ghost:hover{color:var(--bg)}
+}
+.link{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size var(--dur-2) var(--ease-out)}
+@media (hover:hover){.link:hover{background-size:0 1px;background-position:100% 100%}}
+
+/* Header ----------------------------------------------------------------- */
+.header{position:fixed;inset:0 0 auto;z-index:50;color:var(--on-ink);transition:background var(--dur-2) var(--ease-out),box-shadow var(--dur-2)}
+.header__in{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);transition:height var(--dur-2) var(--ease-out)}
+.header.is-scrolled{background:var(--ink);box-shadow:0 1px 0 var(--line-ink)}
+.header.is-scrolled .header__in{height:56px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.brand svg{width:34px;height:34px;transition:transform var(--dur-2) var(--ease-out)}
+.brand span{font:400 1.45rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.01em;transition:font-size var(--dur-2) var(--ease-out)}
+.is-scrolled .brand svg{transform:scale(.85)}
+.is-scrolled .brand span{font-size:1.25rem}
+.nav{display:none}
+.menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;min-width:44px;padding:0 4px 0 12px;background:none;border:0;color:inherit;font:600 var(--step--1)/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.menu-btn i{position:relative;display:block;width:24px;height:2px;background:currentColor;transition:background var(--dur-1)}
+.menu-btn i::before,.menu-btn i::after{content:"";position:absolute;left:0;width:24px;height:2px;background:currentColor;transition:transform var(--dur-2) var(--ease-out)}
+.menu-btn i::before{top:-7px}.menu-btn i::after{top:7px}
+.menu-btn[aria-expanded="true"] i{background:transparent}
+.menu-btn[aria-expanded="true"] i::before{transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] i::after{transform:translateY(-7px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:45;background:var(--ink);color:var(--on-ink);padding:calc(var(--header-h) + var(--space-7)) var(--gutter) calc(var(--space-9) + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;justify-content:space-between;visibility:hidden;clip-path:inset(0 0 100% 0);transition:clip-path var(--dur-3) var(--ease-out),visibility 0s var(--dur-3)}
+.drawer.is-open{visibility:visible;clip-path:inset(0);transition:clip-path var(--dur-3) var(--ease-out)}
+.drawer ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.drawer li{counter-increment:m;border-bottom:1px solid var(--line-ink);opacity:0;transform:translateY(24px);transition:opacity var(--dur-2) var(--ease-out),transform var(--dur-3) var(--ease-out)}
+.drawer.is-open li{opacity:1;transform:none;transition-delay:calc(var(--i) * 70ms + 150ms)}
+.drawer li a{display:flex;align-items:baseline;gap:var(--space-4);padding:var(--space-3) 0;font:400 var(--step-4)/1 var(--font-display);text-transform:uppercase;text-decoration:none}
+.drawer li a::before{content:"0" counter(m);font:600 var(--step--1)/1 var(--font-body);color:var(--brand-light);letter-spacing:.1em}
+.drawer__foot{color:var(--on-ink-soft);font-size:var(--step--1)}
+.drawer__foot a{color:var(--on-ink)}
+body.menu-open{overflow:hidden}
+
+/* Hero ------------------------------------------------------------------- */
+.hero{position:relative;padding-top:calc(var(--header-h) + var(--space-6));overflow:hidden}
+.hero__text{display:contents}
+.hero__text > *{grid-column:1/-1;position:relative;z-index:2}
+.hero__lead{order:3}
+.hero__media{order:2}
+.hero__eyebrow{margin-bottom:var(--space-5)}
+.hero h1{font-size:var(--step-6);line-height:.98;letter-spacing:-.01em}
+.hero h1 .ln{display:block;overflow:hidden;padding:.14em 0 .04em;margin:-.14em 0 -.04em}
+.hero h1 .ln > span{display:block}
+.hero h1 em{font-style:normal;color:var(--brand-light)}
+.hero__lead{margin-top:var(--space-6);max-width:34ch;color:var(--on-ink-soft);font-size:var(--step-1);line-height:1.45}
+.hero__lead strong{color:var(--on-ink);font-weight:600}
+.proofline{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-3);margin-top:var(--space-5);font-weight:600}
+.proofline .stars{color:var(--brand-light)}
+.proofline a{color:var(--on-ink);display:inline-flex;align-items:center;min-height:44px}
+.hero__cta{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-top:var(--space-5)}
+.hero__cta .btn{padding:0 var(--space-3)}
+.hero__media{position:relative;grid-column:1/-1;margin:var(--space-8) calc(-1 * var(--gutter)) 0}
+.hero__media::before{content:"";position:absolute;inset:-16px 0 auto;height:40%;background:var(--brand);clip-path:polygon(0 45%,50% 0,100% 45%,100% calc(45% + 8px),50% 8px,0 calc(45% + 8px))}
+.hero__frame{position:relative;clip-path:var(--gable);aspect-ratio:4/5;overflow:hidden;background:var(--ink-2)}
+.hero__frame img{width:100%;height:100%;object-fit:cover;object-position:44% 50%;transform-origin:50% 40%}
+.hero__frame::after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(22,24,26,.85))}
+.hero__cap{position:absolute;z-index:2;left:var(--gutter);right:var(--gutter);bottom:var(--space-5);display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--step--1);color:#fff;letter-spacing:.04em;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.hero__cap b{font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+
+/* Load choreography (only with JS, never with reduced motion) */
+@keyframes fadeIn{from{opacity:0}}
+@keyframes lineUp{from{transform:translateY(105%)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(20px)}}
+@keyframes unclip{from{clip-path:inset(100% 0 0 0)}}
+@keyframes settle{from{transform:scale(1.08)}}
+@keyframes ridge{from{opacity:0;transform:translateY(24px)}}
+@media (prefers-reduced-motion:no-preference){
+  .js .header{animation:fadeIn var(--dur-2) var(--ease-out) both}
+  .js .hero h1 .ln > span{animation:lineUp var(--dur-3) var(--ease-out) both;animation-delay:calc(120ms + var(--i) * 80ms)}
+  .js .hero__eyebrow,.js .hero__lead,.js .proofline,.js .hero__cta{animation:riseIn var(--dur-3) var(--ease-out) both;animation-delay:480ms}
+  .js .hero__cta{animation-delay:560ms}
+  .js .hero__media{animation:unclip 1s var(--ease-in-out) both;animation-delay:300ms}
+  .js .hero__frame img{animation:settle 1.4s var(--ease-out) both;animation-delay:300ms}
+  .js .hero__media::before{animation:ridge var(--dur-3) var(--ease-out) both;animation-delay:900ms}
+}
+
+/* Marquee ---------------------------------------------------------------- */
+.marquee{background:var(--brand);color:var(--brand-ink);overflow:hidden;padding:var(--space-4) 0;border-block:2px solid var(--ink)}
+.marquee__track{display:flex;width:max-content}
+.marquee__group{display:flex;align-items:center;flex:none}
+.marquee__group span{font:400 var(--step-2)/1 var(--font-display);text-transform:uppercase;white-space:nowrap;padding-inline:var(--space-5)}
+.marquee__group svg{width:22px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75}
+@media (prefers-reduced-motion:no-preference){
+  .marquee__track{animation:marq 48s linear infinite}
+  @keyframes marq{to{transform:translateX(-50%)}}
+}
+
+/* Proof ------------------------------------------------------------------ */
+.section{padding-block:var(--section)}
+.proof__score{grid-column:1/-1}
+.score{display:flex;align-items:flex-end;gap:var(--space-4);margin-top:var(--space-5)}
+.score__num{font:400 var(--step-6)/.85 var(--font-display);letter-spacing:-.02em}
+.score__meta{padding-bottom:6px}
+.score__meta .stars svg{width:20px;height:20px}
+.score__meta p{font-weight:600;margin-top:var(--space-2)}
+.proof h2{font-size:var(--step-4);margin-top:var(--space-6);max-width:14ch}
+.proof__intro{margin-top:var(--space-4);color:var(--ink-soft);max-width:44ch}
+.gmaps{display:inline-flex;align-items:center;gap:var(--space-2);margin-top:var(--space-5);min-height:44px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--brand);color:var(--ink)}
+.gmaps .icon{width:18px;height:18px;transition:transform var(--dur-2) var(--ease-out)}
+@media (hover:hover){.gmaps:hover .icon{transform:translate(3px,-3px)}}
+.quotes{grid-column:1/-1;list-style:none;margin:var(--space-7) calc(-1 * var(--gutter)) 0;padding:0 var(--gutter);display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:var(--space-4);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);scrollbar-width:none;overscroll-behavior-x:contain}
+.quotes::-webkit-scrollbar{display:none}
+.quote{scroll-snap-align:start;display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface);padding:var(--space-6) var(--space-5);border-top:4px solid var(--ink)}
+.quote blockquote{margin:0;font-size:var(--step-1);line-height:1.45;flex:1}
+.quote blockquote::before{content:"“";display:block;font:400 4rem/.6 var(--font-display);color:var(--brand);margin-bottom:var(--space-2);height:.5em}
+.quote footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:var(--space-4);font-weight:600;font-size:var(--step--1);letter-spacing:.06em;text-transform:uppercase}
+.rail-hint{grid-column:1/-1;margin-top:var(--space-4);font-size:var(--step--1);color:var(--ink-soft);letter-spacing:.06em;display:flex;align-items:center;gap:var(--space-2)}
+.rail-hint .icon{width:18px;height:18px}
+
+/* Services --------------------------------------------------------------- */
+.services__head{grid-column:1/-1}
+.services__head h2{font-size:var(--step-5);margin-top:var(--space-5)}
+.services__head p{margin-top:var(--space-5);color:var(--on-ink-soft);max-width:40ch}
+.services__head .btn{margin-top:var(--space-6)}
+.svc{grid-column:1/-1;list-style:none;margin:var(--space-8) 0 0;padding:0;border-top:1px solid var(--line-ink)}
+.svc li{display:grid;grid-template-columns:auto 1fr;column-gap:var(--space-5);padding:var(--space-6) 0;border-bottom:1px solid var(--line-ink)}
+.svc__n{font:400 var(--step-3)/.9 var(--font-display);color:var(--brand-light);min-width:2.2ch}
+.svc h3{font-size:var(--step-3);line-height:1}
+.svc p{grid-column:2;margin-top:var(--space-3);color:var(--on-ink-soft);max-width:52ch}
+.svc cite{grid-column:2;display:block;margin-top:var(--space-3);font-style:normal;font-size:var(--step--1);letter-spacing:.04em;color:var(--on-ink)}
+.svc cite span{color:var(--brand-light)}
+.svc li{transition:background var(--dur-2) var(--ease-out)}
+
+/* Feature (green roof) --------------------------------------------------- */
+.feature{position:relative;background:var(--bg)}
+.feature__img{position:relative;overflow:hidden;aspect-ratio:4/5}
+.feature__img img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.feature__panel{position:relative;z-index:2;margin:calc(-1 * var(--space-9)) var(--gutter) 0;background:var(--bg);padding:var(--space-6) var(--space-5) var(--space-5);border-top:6px solid var(--brand)}
+.feature__panel blockquote{margin:var(--space-4) 0 0;font:400 var(--step-3)/1.02 var(--font-display);text-transform:uppercase;text-wrap:balance}
+.feature__panel blockquote span{color:var(--brand)}
+.feature__panel figcaption{margin-top:var(--space-5);display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3);font-weight:600;font-size:var(--step--1);letter-spacing:.08em;text-transform:uppercase}
+.feature__panel figcaption span{color:var(--ink-soft);font-weight:400;letter-spacing:.04em;text-transform:none;font-size:var(--step-0)}
+
+/* Work duo --------------------------------------------------------------- */
+.work{padding-bottom:var(--section)}
+.work__head{grid-column:1/-1;padding-top:var(--section)}
+.work__head h2{font-size:var(--step-5);margin-top:var(--space-5)}
+.fig{margin:0}
+.fig__img{overflow:hidden;background:var(--surface)}
+.fig__img img{width:100%;height:100%;object-fit:cover;transition:transform var(--dur-3) var(--ease-out)}
+@media (hover:hover){.fig:hover .fig__img img{transform:scale(1.03)}}
+.fig figcaption{display:flex;gap:var(--space-3);margin-top:var(--space-3);font-size:var(--step--1);color:var(--ink-soft);line-height:1.4}
+.fig figcaption b{color:var(--brand);font-weight:600;letter-spacing:.12em}
+.fig--a{grid-column:1/-1;margin-top:var(--space-7)}
+.fig--a .fig__img{aspect-ratio:1}
+.fig--a img{object-position:50% 78%}
+.fig--b{grid-column:2/-1;margin-top:var(--space-7)}
+.fig--b .fig__img{aspect-ratio:1}
+.fig--b img{object-position:100% 0}
+.work__note{grid-column:1/-1;margin-top:var(--space-7);font-size:var(--step-1);max-width:30ch;line-height:1.4}
+
+/* Company figures -------------------------------------------------------- */
+.company{background:var(--surface)}
+.company__head{grid-column:1/-1}
+.company__head h2{font-size:var(--step-4);margin-top:var(--space-5);max-width:16ch}
+.figs{grid-column:1/-1;list-style:none;margin:var(--space-7) 0 0;padding:0;display:grid;gap:0}
+.figs li{border-top:2px solid var(--ink);padding:var(--space-5) 0 var(--space-6)}
+.figs strong{display:block;font:400 var(--step-5)/.9 var(--font-display);text-transform:uppercase;letter-spacing:-.01em}
+.figs strong.sm{font-size:var(--step-4);line-height:1.06}
+.figs p{margin-top:var(--space-3);color:var(--ink-soft);max-width:34ch}
+
+/* Hours + map ------------------------------------------------------------ */
+.visit__info{grid-column:1/-1}
+.visit h2{font-size:var(--step-4);margin-top:var(--space-5);max-width:12ch}
+.live{display:inline-flex;align-items:center;gap:var(--space-3);margin-top:var(--space-5);padding:var(--space-3) var(--space-4);background:var(--ink);color:var(--on-ink);font-weight:600;border-radius:var(--radius)}
+.live i{width:10px;height:10px;border-radius:50%;background:var(--on-ink-soft);flex:none}
+.live.is-open i{background:#8DBA4C;box-shadow:0 0 0 0 rgba(141,186,76,.6)}
+@media (prefers-reduced-motion:no-preference){.live.is-open i{animation:pulse 2.4s var(--ease-out) infinite}}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(141,186,76,0)}100%{box-shadow:0 0 0 0 rgba(141,186,76,0)}}
+.hours{width:100%;margin-top:var(--space-6);border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:var(--space-3) 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.hours th{text-transform:capitalize}
+.hours td{text-align:right;white-space:nowrap}
+.hours tr.is-today th,.hours tr.is-today td{font-weight:600;color:var(--ink)}
+.hours tr.is-today th::after{content:"Aujourd’hui";margin-left:var(--space-3);padding:2px 8px;background:var(--brand);color:var(--brand-ink);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;vertical-align:2px;border-radius:var(--radius)}
+.hours .closed{color:var(--ink-soft)}
+.addr{margin-top:var(--space-6);font-style:normal;font-size:var(--step-1);line-height:1.4}
+.addr small{display:block;margin-top:var(--space-2);font-size:var(--step--1);color:var(--ink-soft)}
+.visit .btn{margin-top:var(--space-5)}
+.map{grid-column:1/-1;margin-top:var(--space-7);position:relative;background:var(--surface);border-radius:var(--radius-2);overflow:hidden;aspect-ratio:4/5;border:2px solid var(--ink)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05)}
+.map__fallback{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:var(--space-5);font-weight:600}
+
+/* Contact ---------------------------------------------------------------- */
+.contact{position:relative;overflow:hidden}
+.contact h2{grid-column:1/-1;font-size:var(--step-5);margin-top:var(--space-5)}
+.contact h2 span{color:var(--brand-light)}
+.bigtel{grid-column:1/-1;display:inline-flex;align-items:center;gap:var(--space-4);margin-top:var(--space-7);font:400 clamp(2.6rem,1rem + 9vw,7.5rem)/1 var(--font-display);color:var(--on-ink);text-decoration:none;letter-spacing:.01em;white-space:nowrap;justify-self:start}
+.bigtel .icon{width:.5em;height:.5em;color:var(--brand-light);stroke-width:1.75}
+.bigtel{background:linear-gradient(var(--brand-light),var(--brand-light)) 0 100%/0 4px no-repeat;transition:background-size var(--dur-3) var(--ease-out)}
+@media (hover:hover){.bigtel:hover{background-size:100% 4px}}
+.contact__p{grid-column:1/-1;margin-top:var(--space-5);color:var(--on-ink-soft);max-width:46ch}
+.contact__btns{grid-column:1/-1;display:grid;gap:var(--space-3);margin-top:var(--space-7)}
+.contact__btns .btn{justify-content:space-between}
+.contact__mark{position:absolute;right:-6vw;bottom:-2vw;width:min(70vw,640px);color:var(--ink-2);pointer-events:none;z-index:0}
+.contact .wrap{position:relative;z-index:1}
+
+/* Footer ----------------------------------------------------------------- */
+.footer{border-top:1px solid var(--line-ink);padding-block:var(--space-8) var(--space-7);font-size:var(--step--1);color:var(--on-ink-soft)}
+.footer__name{grid-column:1/-1;font:400 var(--step-4)/.95 var(--font-display);text-transform:uppercase;color:var(--on-ink)}
+.footer__cols{grid-column:1/-1;display:grid;gap:var(--space-5);margin-top:var(--space-6)}
+.footer a{color:var(--on-ink);display:inline-block;padding-block:10px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--brand-light)}
+.footer__legal{grid-column:1/-1;margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--line-ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3)}
+
+/* Sticky action bar (mobile) -------------------------------------------- */
+.actionbar{position:fixed;inset:auto 0 0;z-index:40;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-ink);padding-bottom:env(safe-area-inset-bottom);background-color:var(--ink);border-top:1px solid var(--line-ink)}
+.actionbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:64px;background:var(--ink);color:var(--on-ink);text-decoration:none;font:600 .8rem/1 var(--font-body);letter-spacing:.08em;text-transform:uppercase;transition:background var(--dur-1)}
+.actionbar a:first-child{background:var(--brand);color:var(--brand-ink)}
+.actionbar a:active{background:var(--ink-2)}
+.actionbar .icon{width:22px;height:22px}
+
+/* Reveal ----------------------------------------------------------------- */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity var(--dur-3) var(--ease-out),transform var(--dur-3) var(--ease-out);transition-delay:calc(var(--d,0) * 80ms)}
+  .js [data-reveal].is-in{opacity:1;transform:none}
+  .js .fig__img[data-reveal]{opacity:1;transform:none;clip-path:inset(12% 0 0 0);transition:clip-path 1s var(--ease-out)}
+  .js .fig__img[data-reveal].is-in{clip-path:inset(0)}
+  @supports (animation-timeline:view()){
+    .feature__img img{animation:parallax linear both;animation-timeline:view();animation-range:cover}
+    @keyframes parallax{from{transform:scale(1.12) translateY(-4%)}to{transform:scale(1.12) translateY(4%)}}
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ≥ 640 ------------------------------------------------------------------ */
+@media (min-width:640px){
+  .hero__cta{display:flex;flex-wrap:wrap}
+  .quotes{grid-auto-columns:56%}
+  .feature__img{aspect-ratio:4/3}
+  .feature__panel{max-width:560px}
+  .figs{grid-template-columns:1fr 1fr;column-gap:var(--space-6)}
+  .map{aspect-ratio:16/10}
+  .contact__btns{grid-template-columns:1fr 1fr}
+  .footer__cols{grid-template-columns:repeat(3,1fr)}
+}
+/* ≥ 960 ------------------------------------------------------------------ */
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .actionbar{display:none}
+  .grid{grid-template-columns:repeat(12,minmax(0,1fr))}
+  :root{--header-h:80px}
+  .header.is-scrolled .header__in{height:64px}
+  .menu-btn{display:none}
+  .nav{display:flex;align-items:center;gap:var(--space-6)}
+  .nav a{font-weight:600;font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:var(--space-3) 0}
+  .nav .btn{min-height:44px;font-size:var(--step--1);letter-spacing:.06em;text-transform:none;padding:0 var(--space-4)}
+  .drawer{display:none}
+
+  .hero{min-height:min(100svh,980px);padding-top:calc(var(--header-h) + var(--space-6))}
+  .hero .grid{align-items:end;min-height:calc(min(100svh,980px) - var(--header-h) - var(--space-6))}
+  .hero__text{display:block;grid-column:1/9;grid-row:1;padding-bottom:var(--space-7);position:relative;z-index:2}
+  .hero__lead{max-width:30ch}
+  .hero h1{font-size:clamp(5rem,7.6vw,9rem)}
+  .hero__lead{font-size:var(--step-0)}
+  .hero__media{grid-column:7/-1;grid-row:1;margin:0 calc(-1 * var(--gutter)) 0 0;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end}
+  .hero__media::before{inset:-20px 0 auto;height:30%}
+  .hero__frame{aspect-ratio:auto;height:100%;min-height:560px;--gable:polygon(0 14%,50% 0,100% 14%,100% 100%,0 100%)}
+  .hero__frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,24,26,.72),rgba(22,24,26,0) 45%)}
+  .hero__frame img{object-position:40% 50%}
+  .hero__cta .btn{padding:0 var(--space-6)}
+
+  .proof__score{grid-column:1/5;align-self:start;position:sticky;top:calc(var(--header-h) + var(--space-6))}
+  .quotes{grid-column:6/-1;grid-row:1/3;margin:0;padding:0;grid-auto-flow:row;grid-template-columns:1fr 1fr;grid-auto-columns:auto;overflow:visible;gap:var(--space-5)}
+  .quote:nth-child(even){translate:0 var(--space-9)}
+  .proof{padding-bottom:calc(var(--section) + var(--space-9))}
+  .rail-hint{display:none}
+  .proof h2{font-size:var(--step-3)}
+
+  .services__head{grid-column:1/5;align-self:start;position:sticky;top:calc(var(--header-h) + var(--space-6))}
+  .services__head h2{font-size:var(--step-4)}
+  .svc{grid-column:6/-1;margin-top:0}
+  .svc li{grid-template-columns:5rem 1fr;padding:var(--space-7) 0}
+  .svc__n{font-size:var(--step-4)}
+  .svc h3{font-size:var(--step-4)}
+  @media (hover:hover){.svc li:hover{background:var(--ink-2)}}
+
+  .feature__img{aspect-ratio:auto;height:min(92svh,860px)}
+  .feature__panel{position:absolute;left:max(var(--gutter),calc((100vw - var(--max)) / 2));bottom:calc(-1 * var(--space-9));margin:0;max-width:620px;padding:var(--space-7) var(--space-7) var(--space-6)}
+  .work__head{grid-column:8/-1;grid-row:1;padding-top:calc(var(--section) + var(--space-9))}
+  .work__head h2{font-size:var(--step-4)}
+  .fig--a{grid-column:1/7;grid-row:1/4;align-self:start;margin-top:calc(var(--section) + var(--space-10))}
+  .fig--a .fig__img{aspect-ratio:4/5}
+  .fig--a img{object-position:50% 100%}
+  .fig--b{grid-column:8/-1;grid-row:2;margin-top:var(--space-7)}
+  .work__note{grid-column:8/-1;grid-row:3;align-self:start}
+
+  .company__head{grid-column:1/6}
+  .figs{grid-column:6/-1;margin-top:0;grid-template-columns:1fr 1fr;column-gap:var(--space-6)}
+  .figs li:first-child{grid-column:1/-1}
+  .figs li:first-child strong{font-size:clamp(6rem,12vw,11rem)}
+
+  .visit__info{grid-column:1/6}
+  .map{grid-column:7/-1;margin-top:0;aspect-ratio:auto;min-height:620px}
+  .visit .grid{align-items:stretch}
+
+  .contact h2{grid-column:1/11}
+  .contact__p{grid-column:1/7}
+  .contact__btns{grid-column:1/-1;grid-template-columns:1.25fr 1.35fr 1fr 1fr}
+  .footer__name{grid-column:1/6}
+  .footer__cols{grid-column:7/-1;margin-top:0}
+}
+@media (min-width:1280px){
+  .hero__media{margin-right:calc((var(--max) + 2 * var(--gutter) - 100vw) / 2 - var(--gutter))}
+}
+</style>
+<script>
+document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded', function () {
+  var d = document, html = d.documentElement, body = d.body;
+
+  /* Header shrink */
+  var header = d.querySelector('.header');
+  var onScroll = function () { header.classList.toggle('is-scrolled', scrollY > 24); };
+  onScroll(); addEventListener('scroll', onScroll, { passive: true });
+
+  /* Menu */
+  var btn = d.querySelector('.menu-btn'), drawer = d.getElementById('menu');
+  function setMenu(open) {
+    btn.setAttribute('aria-expanded', open);
+    btn.querySelector('.menu-btn__t').textContent = open ? 'Fermer' : 'Menu';
+    drawer.classList.toggle('is-open', open);
+    drawer.toggleAttribute('inert', !open);
+    body.classList.toggle('menu-open', open);
+    if (open) header.classList.add('is-scrolled'); else onScroll();
+  }
+  drawer.setAttribute('inert', '');
+  btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); } });
+
+  /* Reveal on scroll */
+  var els = d.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else els.forEach(function (el) { el.classList.add('is-in'); });
+
+  /* Hours: live badge + today */
+  var HOURS = { dimanche: 'Fermé', lundi: '08:00–17:00', mardi: '08:00–17:00', mercredi: '08:00–17:00', jeudi: '08:00–17:00', vendredi: '08:00–17:00', samedi: '08:00–12:00' };
+  var DAYS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  function parse(s) {
+    s = String(s || '').toLowerCase();
+    if (!s || /ferm/.test(s)) return [];
+    if (/24\s*h|24\/24|24 heures/.test(s)) return [[0, 1440]];
+    var out = [], re = /(\d{1,2})(?:[:h.](\d{2}))?\s*[–—-]\s*(\d{1,2})(?:[:h.](\d{2}))?/g, m;
+    while ((m = re.exec(s))) {
+      var a = +m[1] * 60 + (+m[2] || 0), b = +m[3] * 60 + (+m[4] || 0);
+      if (b <= a) b += 1440;
+      out.push([a, b]);
+    }
+    return out;
+  }
+  function fmt(min) { min %= 1440; var h = Math.floor(min / 60), m = min % 60; return h + 'h' + (m ? String(m).padStart(2, '0') : ''); }
+  function now() {
+    try {
+      var p = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Brussels', weekday: 'long', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+      var g = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
+      return { day: DAYS.indexOf(g('weekday').toLowerCase()), min: +g('hour') * 60 + +g('minute') };
+    } catch (e) { var n = new Date(); return { day: n.getDay(), min: n.getHours() * 60 + n.getMinutes() }; }
+  }
+  var t = now(), live = d.querySelector('[data-live]');
+  if (t.day < 0) { var n = new Date(); t = { day: n.getDay(), min: n.getHours() * 60 + n.getMinutes() }; }
+  var row = d.querySelector('[data-day="' + DAYS[t.day] + '"]');
+  if (row) { row.classList.add('is-today'); row.setAttribute('aria-current', 'date'); }
+  if (live) {
+    var today = parse(HOURS[DAYS[t.day]]), yest = parse(HOURS[DAYS[(t.day + 6) % 7]]), msg = '', open = false;
+    today.forEach(function (r) { if (!open && t.min >= r[0] && t.min < r[1]) { open = true; msg = 'Ouvert maintenant · jusqu’à ' + fmt(r[1]); } });
+    yest.forEach(function (r) { if (!open && r[1] > 1440 && t.min + 1440 < r[1]) { open = true; msg = 'Ouvert maintenant · jusqu’à ' + fmt(r[1]); } });
+    if (!open) {
+      var next = today.filter(function (r) { return r[0] > t.min; })[0];
+      if (next) msg = 'Fermé · ouvre à ' + fmt(next[0]);
+      else for (var i = 1; i < 8; i++) {
+        var r = parse(HOURS[DAYS[(t.day + i) % 7]])[0];
+        if (r) { msg = 'Fermé · ouvre ' + (i === 1 ? 'demain' : DAYS[(t.day + i) % 7]) + ' à ' + fmt(r[0]); break; }
+      }
+    }
+    if (msg) { live.querySelector('span').textContent = msg; live.classList.toggle('is-open', open); live.hidden = false; }
+  }
+
+  /* Year */
+  d.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+});
+</script>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://thom-s-toit-srl-mons.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://thom-s-toit-srl-mons.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://thom-s-toit-srl-mons.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+  <symbol id="i-gable" viewBox="0 0 28 20"><path d="M2 14 14 4l12 10"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="Thom’s toit, retour en haut">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="#B0452A"/><path d="M6 20 20 9l14 11" fill="none" stroke="#FFF8F2" stroke-width="3.5"/><path d="M14 21h12M20 21v12" stroke="#FFF8F2" stroke-width="3.5"/></svg>
+      <span>Thom’s toit</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="link" href="#avis">Avis</a>
+      <a class="link" href="#metier">Le métier</a>
+      <a class="link" href="#chantiers">Chantiers</a>
+      <a class="link" href="#horaires">Horaires</a>
+      <a class="btn" href="tel:+32471676864"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0471 67 68 64</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__t">Menu</span><i aria-hidden="true"></i></button>
+  </div>
+</header>
+
+<div class="drawer" id="menu">
+  <nav aria-label="Menu mobile">
+    <ol>
+      <li style="--i:0"><a href="#avis">Avis</a></li>
+      <li style="--i:1"><a href="#metier">Le métier</a></li>
+      <li style="--i:2"><a href="#chantiers">Chantiers</a></li>
+      <li style="--i:3"><a href="#horaires">Horaires</a></li>
+      <li style="--i:4"><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+  <p class="drawer__foot">Rue de Frameries 62A, 7040 Quévy<br><a class="link" href="tel:+32471676864">+32 471 67 68 64</a></p>
+</div>
+
+<main id="contenu">
+  <!-- HERO -->
+  <section class="hero on-ink" id="top" aria-labelledby="hero-title">
+    <div class="wrap grid">
+      <div class="hero__text">
+        <p class="label hero__eyebrow">Couvreur · Mons &amp; Quévy</p>
+        <h1 id="hero-title">
+          <span class="ln"><span style="--i:0">Refait.</span></span>
+          <span class="ln"><span style="--i:1">Soigné.</span></span>
+          <span class="ln"><span style="--i:2"><em>Dans les</em></span></span>
+          <span class="ln"><span style="--i:3"><em>délais.</em></span></span>
+        </h1>
+        <p class="hero__lead"><strong>Thom’s toit SRL</strong> couvre, isole et rend étanches les maisons de la région de Mons, du toit plat au toit végétal.</p>
+        <p class="proofline">
+          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <a class="link" href="#avis">4,8 · 41&nbsp;avis Google</a>
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="tel:+32471676864"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+          <a class="btn btn--ghost" href="sms:+32471676864?&amp;body=Bonjour%2C%20je%20souhaiterais%20un%20devis%20pour%20des%20travaux%20de%20toiture.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci."><svg class="icon" aria-hidden="true"><use href="#i-sms"/></svg>Devis par SMS</a>
+        </div>
+      </div>
+      <figure class="hero__media" style="margin-bottom:0">
+        <div class="hero__frame">
+          <img src="assets/photos/photo-04.jpg" width="1600" height="900" fetchpriority="high" alt="Vue de drone d’une maison en cours de couverture : charpente lattée, sous-toiture posée, échafaudage et camionnettes de l’équipe dans la rue">
+        </div>
+        <figcaption class="hero__cap"><b>Chantier</b><span>Toiture entièrement refaite</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MARQUEE: verbatim fragments from Google reviews -->
+  <div class="marquee" aria-label="Extraits d’avis Google">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span>Travail sérieux et soigné</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+        <span>Finitions impeccables</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+        <span>Dans les délais annoncés</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+        <span>Un délai hyper rapide</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+        <span>La qualité du travail est à souligner</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+        <span>Un couvreur fiable</span><svg aria-hidden="true"><use href="#i-gable"/></svg>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span>Travail sérieux et soigné</span><svg><use href="#i-gable"/></svg>
+        <span>Finitions impeccables</span><svg><use href="#i-gable"/></svg>
+        <span>Dans les délais annoncés</span><svg><use href="#i-gable"/></svg>
+        <span>Un délai hyper rapide</span><svg><use href="#i-gable"/></svg>
+        <span>La qualité du travail est à souligner</span><svg><use href="#i-gable"/></svg>
+        <span>Un couvreur fiable</span><svg><use href="#i-gable"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROOF -->
+  <section class="section proof light" id="avis" aria-labelledby="avis-title">
+    <div class="wrap grid">
+      <div class="proof__score" data-reveal>
+        <p class="label">01 — Avis Google</p>
+        <div class="score">
+          <span class="score__num">4,8</span>
+          <div class="score__meta">
+            <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <p><span class="sr">Note de 4,8 sur 5, </span>41&nbsp;avis</p>
+          </div>
+        </div>
+        <h2 id="avis-title">Ce que disent les clients, mot pour mot</h2>
+        <p class="proof__intro">Le mot qui revient le plus&#8239;: «&nbsp;travail&nbsp;». Juste derrière&#8239;: «&nbsp;chantier&nbsp;», «&nbsp;prix&nbsp;», «&nbsp;réactif&nbsp;».</p>
+        <a class="gmaps" href="https://www.google.com/maps/place/?q=place_id:ChIJu-a92fI3wkcR6WhDh1qCHKY" target="_blank" rel="noopener">Voir les 41 avis sur Google <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <ul class="quotes" aria-label="Avis clients">
+        <li class="quote" data-reveal style="--d:0">
+          <blockquote><p>Le chantier a été réalisé dans les délais annoncés, avec des finitions impeccables et un vrai souci du détail.</p></blockquote>
+          <footer><span>Pierre M.</span><span class="stars" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></footer>
+        </li>
+        <li class="quote" data-reveal style="--d:1">
+          <blockquote><p>Sérieux, compétent et accessible pour un chantier complet mené avec brio autant que pour une petite réparation urgente et réalisée impeccablement dans un délai hyper rapide.</p></blockquote>
+          <footer><span>Valérie F.</span><span class="stars" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></footer>
+        </li>
+        <li class="quote" data-reveal style="--d:2">
+          <blockquote><p>Nous avons fait appel à Thom’s toit SRL pour le remplacement complet de notre toiture cet été. L’équipe est sérieuse, disponible et efficace. La qualité du travail est à souligner.</p></blockquote>
+          <footer><span>Laurent D.</span><span class="stars" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></footer>
+        </li>
+        <li class="quote" data-reveal style="--d:3">
+          <blockquote><p>Le patron et son équipe ont été professionnels tout au long du chantier. Je suis satisfait du rendu final.</p></blockquote>
+          <footer><span>Pilou</span><span class="stars" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></footer>
+        </li>
+      </ul>
+      <p class="rail-hint" aria-hidden="true"><svg class="icon"><use href="#i-swipe"/></svg>Faites glisser pour lire la suite</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section on-ink services" id="metier" aria-labelledby="metier-title">
+    <div class="wrap grid">
+      <div class="services__head" data-reveal>
+        <p class="label">02 — Le métier</p>
+        <h2 id="metier-title">Du lattage à la dernière tuile</h2>
+        <p>Trois activités enregistrées à la BCE, et ce que les clients racontent de leurs chantiers.</p>
+        <a class="btn" href="tel:+32471676864"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Parler de votre toit</a>
+      </div>
+      <ol class="svc">
+        <li data-reveal><span class="svc__n">01</span><h3>Travaux de couverture</h3><p>Toitures en pente et toits plats, en remplacement complet ou en réparation.</p></li>
+        <li data-reveal><span class="svc__n">02</span><h3>Isolation</h3><p>Mise en place de l’isolation de la toiture.</p></li>
+        <li data-reveal><span class="svc__n">03</span><h3>Étanchéité des murs</h3><p>Travaux d’étanchéification des murs contre l’humidité.</p></li>
+        <li data-reveal><span class="svc__n">04</span><h3>Toits végétaux</h3><cite><span>«&nbsp;la réalisation de mon toit végétal&nbsp;»</span> — Pilou</cite></li>
+        <li data-reveal><span class="svc__n">05</span><h3>Remplacement complet</h3><cite><span>«&nbsp;le remplacement complet de notre toiture&nbsp;»</span> — Laurent D.</cite></li>
+        <li data-reveal><span class="svc__n">06</span><h3>Réparations urgentes</h3><cite><span>«&nbsp;une petite réparation urgente&nbsp;»</span> — Valérie F.</cite></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURE: green roof -->
+  <section class="feature" id="chantiers" aria-labelledby="chantiers-title">
+    <div class="feature__img">
+      <img src="assets/photos/photo-02.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Toit plat végétalisé couvert de sédum, bordé de gravier et d’une rive métallique, au-dessus d’un jardin">
+    </div>
+    <figure class="feature__panel" data-reveal>
+      <p class="label">03 — Chantiers</p>
+      <blockquote><p>«&nbsp;Travail sérieux et soigné pour la réalisation de mon <span>toit végétal</span>.&nbsp;»</p></blockquote>
+      <figcaption>Pilou <span class="stars" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span>Le résultat final correspond pleinement à mes attentes.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="work" aria-labelledby="chantiers-title">
+    <div class="wrap grid">
+      <div class="work__head" data-reveal>
+        <p class="label">Photos de chantier</p>
+        <h2 id="chantiers-title">Plat, en pente, sous le ciel du Hainaut</h2>
+      </div>
+      <figure class="fig fig--a">
+        <div class="fig__img" data-reveal><img src="assets/photos/photo-01.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Toit plat à membrane noire, mouillé par la pluie, avec cheminée en briques et rives alignées"></div>
+        <figcaption><b>FIG.&nbsp;01</b>Toit plat, membrane et rives, juste après la pluie.</figcaption>
+      </figure>
+      <figure class="fig fig--b">
+        <div class="fig__img" data-reveal><img src="assets/photos/photo-03.jpg" width="1600" height="739" loading="lazy" decoding="async" alt="Fenêtre de toit intégrée dans une couverture en tuiles terre cuite, sous des panneaux solaires"></div>
+        <figcaption><b>FIG.&nbsp;02</b>Fenêtres de toit raccordées dans la tuile.</figcaption>
+      </figure>
+      <p class="work__note" data-reveal>«&nbsp;Un chantier complet mené avec brio&nbsp;» ou une petite réparation&#8239;: même équipe, même soin.</p>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="section company" aria-labelledby="ent-title">
+    <div class="wrap grid">
+      <div class="company__head" data-reveal>
+        <p class="label">04 — L’entreprise</p>
+        <h2 id="ent-title">Une SRL de Quévy, couvreur de métier</h2>
+      </div>
+      <ul class="figs">
+        <li data-reveal><strong>2023</strong><p>Thom’s toit SRL est active depuis le 17&nbsp;avril&nbsp;2023, inscrite à la BCE sous le numéro 0800.836.354.</p></li>
+        <li data-reveal style="--d:1"><strong class="sm">Toiture &amp; étanchéité</strong><p>Compétence professionnelle enregistrée depuis le 31&nbsp;mai&nbsp;2023.</p></li>
+        <li data-reveal style="--d:2"><strong class="sm">Une équipe</strong><p>Employeur déclaré à l’ONSS depuis juillet&nbsp;2023. «&nbsp;Le patron et son équipe&nbsp;», écrit un client.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOURS + MAP -->
+  <section class="section visit" id="horaires" aria-labelledby="horaires-title">
+    <div class="wrap grid">
+      <div class="visit__info" data-reveal>
+        <p class="label">05 — Horaires &amp; adresse</p>
+        <h2 id="horaires-title">Du lundi au samedi matin</h2>
+        <p class="live" data-live hidden><i aria-hidden="true"></i><span></span></p>
+        <table class="hours">
+          <caption class="sr">Horaires d’ouverture</caption>
+          <tbody>
+            <tr data-day="lundi"><th scope="row">lundi</th><td>08:00 – 17:00</td></tr>
+            <tr data-day="mardi"><th scope="row">mardi</th><td>08:00 – 17:00</td></tr>
+            <tr data-day="mercredi"><th scope="row">mercredi</th><td>08:00 – 17:00</td></tr>
+            <tr data-day="jeudi"><th scope="row">jeudi</th><td>08:00 – 17:00</td></tr>
+            <tr data-day="vendredi"><th scope="row">vendredi</th><td>08:00 – 17:00</td></tr>
+            <tr data-day="samedi"><th scope="row">samedi</th><td>08:00 – 12:00</td></tr>
+            <tr data-day="dimanche"><th scope="row">dimanche</th><td class="closed">Fermé</td></tr>
+          </tbody>
+        </table>
+        <address class="addr">Rue de Frameries 62A<br>7040 Quévy<small>Siège de l’entreprise, à quelques kilomètres au sud de Mons.</small></address>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Thom's%20toit%20SRL%2C%20Rue%20de%20Frameries%2062A%2C%207040%20Qu%C3%A9vy" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+      </div>
+      <div class="map" data-reveal>
+        <a class="map__fallback" href="https://www.google.com/maps/dir/?api=1&amp;destination=Thom's%20toit%20SRL%2C%20Rue%20de%20Frameries%2062A%2C%207040%20Qu%C3%A9vy" target="_blank" rel="noopener">Ouvrir la carte dans Google Maps</a>
+        <iframe src="https://www.google.com/maps?q=Thom's%20toit%20SRL%2C%20Rue%20de%20Frameries%2062A%2C%207040%20Qu%C3%A9vy&amp;output=embed" title="Carte : Thom’s toit SRL, Rue de Frameries 62A, Quévy" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact on-ink" id="contact" aria-labelledby="contact-title">
+    <svg class="contact__mark" viewBox="0 0 200 120" aria-hidden="true"><path d="M10 110 100 20l90 90" fill="none" stroke="currentColor" stroke-width="18"/></svg>
+    <div class="wrap grid">
+      <p class="label" style="grid-column:1/-1">06 — Contact</p>
+      <h2 id="contact-title" data-reveal>Un toit à refaire, <span>une fuite à régler&#8239;?</span></h2>
+      <a class="bigtel" href="tel:+32471676864" data-reveal aria-label="Appeler le 0471 67 68 64"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0471 67 68 64</a>
+      <p class="contact__p" data-reveal>Pour un devis, décrivez le chantier par SMS&#8239;: le type de toit, la commune, une photo si vous en avez une.</p>
+      <div class="contact__btns" data-reveal>
+        <a class="btn" href="sms:+32471676864?&amp;body=Bonjour%2C%20je%20souhaiterais%20un%20devis%20pour%20des%20travaux%20de%20toiture.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci.">Demander un devis par SMS <svg class="icon" aria-hidden="true"><use href="#i-sms"/></svg></a>
+        <a class="btn btn--ghost" href="mailto:thomstoit1995@gmail.com?subject=Demande%20de%20devis%20toiture">thomstoit1995@gmail.com <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Thom's%20toit%20SRL%2C%20Rue%20de%20Frameries%2062A%2C%207040%20Qu%C3%A9vy" target="_blank" rel="noopener">Itinéraire <svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></a>
+        <a class="btn btn--ghost" href="https://www.facebook.com/search/top?q=thom%E2%80%99s%20toit" target="_blank" rel="noopener">Facebook <svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer on-ink">
+  <div class="wrap grid">
+    <p class="footer__name">Thom’s toit SRL</p>
+    <div class="footer__cols">
+      <p>Couvreur<br>Rue de Frameries 62A<br>7040 Quévy</p>
+      <p><a href="tel:+32471676864">+32 471 67 68 64</a><br><a href="mailto:thomstoit1995@gmail.com">thomstoit1995@gmail.com</a></p>
+      <p>BCE 0800.836.354<br><a href="https://www.facebook.com/search/top?q=thom%E2%80%99s%20toit" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="footer__legal"><span>© <span data-year></span> Thom’s toit SRL</span><span>Couverture · Isolation · Étanchéité</span></p>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Actions rapides">
+  <a href="tel:+32471676864"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="sms:+32471676864?&amp;body=Bonjour%2C%20je%20souhaiterais%20un%20devis%20pour%20des%20travaux%20de%20toiture.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci."><svg class="icon" aria-hidden="true"><use href="#i-sms"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Thom's%20toit%20SRL%2C%20Rue%20de%20Frameries%2062A%2C%207040%20Qu%C3%A9vy" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+</nav>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Thom's toit SRL : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
